@@ -35,7 +35,9 @@ body {
 button, input {
   font: inherit;
 }
-
+:focus {
+  outline: none;
+}
 .icon {
   width: 1em;
   height: 1em;
