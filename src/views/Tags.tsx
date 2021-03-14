@@ -39,14 +39,14 @@ const Height = styled.div`
 `;
 
 function Tags() {
-  const {tags, setTags} = useTags();
+  const {tags} = useTags();
   return (
     <Layout>
       <TagList>
         {tags.map(tag =>
-          <Link to={'/tags/' + tag}>
-            <li key={tag}>
-              <span className="oneLine">{tag}</span>
+          <Link to={'/tags/' + tag.id}>
+            <li key={tag.id}>
+              <span className="oneLine">{tag.name}</span>
               <Icon name="right"/>
             </li>
           </Link>
