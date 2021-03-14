@@ -48,3 +48,8 @@ button, input {
   height: 1em;
   display: inline-block;
 }
+.oneLine {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
