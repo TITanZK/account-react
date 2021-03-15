@@ -8,12 +8,13 @@ import {Link} from 'react-router-dom';
 const TagList = styled.ol`
   font-size: 16px;
   background: white;
-  a {
-    > li {
-      border-bottom: 1px solid #d5d5d9;
-      line-height: 20px;
+  > li {
+    border-bottom: 1px solid #d5d5d9;
+    line-height: 20px;
+    margin-left: 16px;
+    a > {
+      border: 1px solid red;
       padding: 12px 16px 12px 0;
-      margin-left: 16px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -44,12 +45,12 @@ function Tags() {
     <Layout>
       <TagList>
         {tags.map(tag =>
-          <Link to={'/tags/' + tag.id}>
-            <li key={tag.id}>
+          <li key={tag.id}>
+            <Link to={'/tags/' + tag.id}>
               <span className="oneLine">{tag.name}</span>
               <Icon name="right"/>
-            </li>
-          </Link>
+            </Link>
+          </li>
         )}
       </TagList>
       <Center>
