@@ -1,11 +1,11 @@
 import React from 'react';
 import {HashRouter as Router, Switch, Route, Redirect} from 'react-router-dom';
-import Money from './views/Money';
-import Tags from './views/Tags';
-import Statistics from './views/Statistics';
-import NoMatch from './views/NoMatch';
+import Money from 'views/Money';
+import Tags from 'views/Tags';
+import Statistics from 'views/Statistics';
+import NoMatch from 'views/NoMatch';
 import styled from 'styled-components';
-import {Tag} from './views/Tag';
+import {Tag} from 'views/Tag';
 
 const AppWrapper = styled.div`
   color: #333;
