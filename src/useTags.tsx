@@ -9,7 +9,8 @@ const defaultTags = [
 ];
 const useTags = () => {
   const [tags, setTags] = useState<{ id: number; name: string }[]>(defaultTags);
-  return {tags, setTags};
+  const findTagId = (id: number) => tags.filter(tag => tag.id === id)[0];
+  return {tags, setTags, findTagId};
 };
 
 export {useTags};
