@@ -30,9 +30,10 @@ function Money() {
     });
   };
   const submitDate = () => {
-    addRecord(selected);
-    window.alert('记账成功');
-    setSelected(defaultDate);
+    if (addRecord(selected)) {
+      window.alert('记账成功');
+      setSelected(defaultDate);
+    }
   };
   return (
     <MyLayout>
