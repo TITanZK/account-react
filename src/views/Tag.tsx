@@ -5,6 +5,9 @@ import Layout from 'components/Layout';
 import Icon from 'components/Icon';
 import {Button} from 'components/Button';
 import styled from 'styled-components';
+import {Input} from 'components/Input';
+import {Height} from 'components/Height';
+import {Center} from 'components/Center';
 
 type Params = {
   tagId: string
@@ -17,6 +20,12 @@ const TopBar = styled.header`
   line-height: 20px;
   padding: 14px;
   background: white;
+`;
+const InputWrapper = styled.div`
+  background: white;
+  padding: 0 16px;
+  margin-top: 8px;
+  font-size: 16px;
 `
 
 const Tag: React.FC = () => {
@@ -30,17 +39,15 @@ const Tag: React.FC = () => {
         <span>编辑标签</span>
         <Icon/>
       </TopBar>
-      <div>
-        <label>
-          <span>标签名</span>
-          <input
-            placeholder="请输入修改信息"
-            />
-        </label>
-      </div>
-      <div>
+      <InputWrapper>
+        <Input label="标签名" placeholder="请输入修改信息" value={tag.name}/>
+      </InputWrapper>
+      <Center>
+        <Height/>
+        <Height/>
+        <Height/>
         <Button>删除标签</Button>
-      </div>
+      </Center>
     </Layout>
   );
 };
