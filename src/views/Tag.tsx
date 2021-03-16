@@ -26,10 +26,12 @@ const InputWrapper = styled.div`
   padding: 0 16px;
   margin-top: 8px;
   font-size: 16px;
-`
+  line-height: 44px;
+
+`;
 
 const Tag: React.FC = () => {
-  const {findTagId} = useTags();
+  const {findTagId,updateTag} = useTags();
   const {tagId} = useParams<Params>();
   const tag = findTagId(parseInt(tagId));
   return (
@@ -40,7 +42,10 @@ const Tag: React.FC = () => {
         <Icon/>
       </TopBar>
       <InputWrapper>
-        <Input label="标签名" placeholder="请输入修改信息" value={tag.name}/>
+        <Input label="标签名："
+               placeholder="请输入修改信息"
+               onChange={e => updateTag(tag.id, {name: e.target.value})}
+               value={tag.name}/>
       </InputWrapper>
       <Center>
         <Height/>
