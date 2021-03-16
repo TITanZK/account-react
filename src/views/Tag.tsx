@@ -41,7 +41,7 @@ const Tag: React.FC = () => {
   let history = useHistory();
 
   function handleClick() {
-    history.push("/tags");
+    history.goBack();
   }
   return (
     <Layout>
