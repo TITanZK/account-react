@@ -42,7 +42,11 @@ const useTags = () => {
       setTags([...tags, {id: createId(), name: tagName}]);
     } else {return window.alert('标签名不可能为空！');}
   };
-  return {tags, setTags, findTagId, updateTag, findTagIndex, deleteTag, addTag};
+  const getName = (id: number) => {
+    const tag = tags.filter(t => t.id === id)[0];
+    return tag ? tag.name : '';
+  };
+  return {tags, setTags, findTagId, updateTag, findTagIndex, deleteTag, addTag, getName};
 };
 
 export {useTags};
