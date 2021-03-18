@@ -110,8 +110,8 @@ const NumberPadSection: React.FC<Props> = (props) => {
         break;
       case 'OK':
         if (props.onOk) {
-          //TODO
           props.onOk();
+          _setOutput('0')
         }
         break;
     }

@@ -78,9 +78,7 @@ function Statistics() {
           <Header>{beautify(date)}</Header>
           {records.map(r => {
             return <Item>
-              <div className="tags">
-                {r.tagIds.map(tagId => <span key={tagId}>{getName(tagId)}</span>)}
-              </div>
+              <div className="tags">{r.tagIds.map(tagId => <span key={tagId}>{getName(tagId)}</span>)}</div>
               {r.note && <div className="note oneLine">{r.note}</div>}
               <div className="amount">￥{r.amount}</div>
             </Item>;

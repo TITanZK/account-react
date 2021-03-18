@@ -11,17 +11,17 @@ const MyLayout = styled(Layout)`
   display: flex;
   flex-direction: column;
 `;
-type Category = '-' | '+'
+const CategoryWrapper = styled.section`
+  background: #c4c4c4;
+`
 
+type Category = '-' | '+'
 const defaultDate = {
   tagIds: [] as number[],
   note: '',
   category: '-' as Category,
   amount: 0,
 };
-const CategoryWrapper = styled.section`
-  background: #c4c4c4;
-`
 
 function Money() {
   const [selected, setSelected] = useState(defaultDate);
