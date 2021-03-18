@@ -39,7 +39,7 @@ function Statistics() {
   //selectedRecords函数的区别
   const selectedRecords = records.filter(r => r.category === category);
   const hash: { [key: string]: RecordItem[] } = {};
-  selectedRecords.map(r => {
+  selectedRecords.forEach(r => {
     const key = dayjs(r.createdAt).format('YYYY-MM-DD');
     if (!(key in hash)) {
       hash[key] = [];
