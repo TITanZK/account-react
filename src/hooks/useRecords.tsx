@@ -7,7 +7,7 @@ type NewRecordItem = {
   category: '-' | '+',
   amount: number,
 }
-type RecordItem = NewRecordItem & {
+export type RecordItem = NewRecordItem & {
   createdAt: string
 }
 
